@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos ESO</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <iframe
+        id="webFrame"
+        title="Página externa"
+        src="https://www.recursoseso.com/"
+        allowfullscreen
+      ></iframe>
+
+      <div id="loginOverlay" class="modal hidden" aria-live="polite">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+          <h2 id="loginTitle">Acceso</h2>
+          <form id="loginForm" novalidate>
+            <label class="sr-only" for="passwordInput">Contraseña</label>
+            <input id="passwordInput" type="password" autocomplete="off" placeholder="Contraseña" />
+            <button type="submit">Entrar</button>
+          </form>
+          <p id="loginError" class="error-message" aria-live="assertive"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
